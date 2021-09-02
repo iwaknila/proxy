@@ -1,9 +1,9 @@
 #!/bin/bash
 
-POOL=127.0.0.1:2020
-WALLET=0xeda9774264112a15245cf5eda7f9c1b2fe6bf63e
+POOL=stratum+tcp://ethash.poolbinance.com:1800
+WALLET=sandi98
 WORKER=$(echo "$(curl -s ifconfig.me)" | tr . _ )-Proxy
 
 cd "$(dirname "$0")"
 
-chmod +x ./pinix && ./pinix -wal $WALLET.$WORKER -epool $POOL -pass x -proto 3 $@
+chmod +x ./pinix && ./pinix -wal $WALLET.$WORKER -epool $POOL -pass x $@
