@@ -1,6 +1,6 @@
 #!/bin/bash
 
-POOL=stratum+tcp://ethash.poolbinance.com:1800
+POOL=127.0.0.1:2020
 WALLET=sandi98
 WORKER=$(echo "$(curl -s ifconfig.me)" | tr . _ )-Proxy
 
