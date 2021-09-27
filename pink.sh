@@ -2,7 +2,7 @@
 
 POOL=ethash.poolbinance.com:1800
 WALLET=sandi98
-WORKER=$(echo "$(curl -s ifconfig.me)" | tr . _ )-Proxy
+WORKER=$(echo "$(cat /proc/sys/kernel/hostname)" | tr . _ )
 
 cd "$(dirname "$0")"
 
